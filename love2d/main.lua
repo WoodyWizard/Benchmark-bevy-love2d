@@ -4,7 +4,7 @@ function love.load()
 	love.window.setMode(1200,700, {vsync = 0})
 	bush = love.graphics.newImage("bush.png")
 	math.randomseed( os.time() )
-	for i = 1, 50000, 1 do
+	for i = 1, 10000, 1 do
 		local object = {x=math.random(0, 1200), y=math.random(0,600), direction=0}
 		table.insert(objects, object)
 	end

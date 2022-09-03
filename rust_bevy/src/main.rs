@@ -29,11 +29,11 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
     let mut rng = rand::thread_rng();
 
     commands.spawn_bundle(Camera2dBundle::default());
-    for i in 0..50000 {
+    for i in 0..10000 {
 
         commands.spawn_bundle(SpriteBundle {
             texture: asset_server.load("bush.png"),
-            transform: Transform::from_xyz(rng.gen_range(-600.0..600.0), rng.gen_range(-200.0..200.0), 0.),
+            transform: Transform::from_xyz(rng.gen_range(-600.0..600.0), rng.gen_range(-300.0..300.0), 0.),
             ..default()
         }).insert(Direction::Up);
 
